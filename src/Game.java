@@ -98,12 +98,18 @@ public class Game {
 
                         if(gameOver)
                             break;
-                        // output and input looping
-//                        if(trick <= 1){
-                        int leadPlayer = 0;
-                        for(int i=1; i<4; i++)
-                            if(p[i].trickPoints > p[i-1].trickPoints)
+
+                        int highestTrickPoint = 0;
+                        int leadPlayer = -1;
+
+                        for(int i=0; i<p.length; i++){
+                            Player player = p[i];
+
+                            if(player.trickPoints > highestTrickPoint){
+                                highestTrickPoint = player.trickPoints;
                                 leadPlayer = i;
+                            }
+                        }
 
                         if(trick > 1)
                             System.out.println("Player " + p[leadPlayer].playerName + " wins the trick");
