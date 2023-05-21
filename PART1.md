@@ -7,7 +7,7 @@ No | ID         | Name                  | Task descriptions | Contribution %
 1  | 1191103257 | Choong Seow Rou       |                   |
 2  | 1211103412 | Lai Chi Nyet          |                   |
 3  | 1191103213 | Ang Kuan Yang         |                   |
-4  | 1211104786 | Nichoals Tan Zhi Xuan |                   |   100%
+4  | 1211104786 | Nicholas Tan Zhi Xuan |                   |   
 
 
 ## B. Feature Completion
