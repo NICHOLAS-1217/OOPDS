@@ -2,12 +2,12 @@
 
 ## A. Member Contributions
 
-No | ID         | Name                  | Task descriptions | Contribution %
--- | ---------- | ----------------------| ----------------- | --------------
-1  | 1191103257 | Choong Seow Rou       |                   |
-2  | 1211103412 | Lai Chi Nyet          |                   |
-3  | 1191103213 | Ang Kuan Yang         |                   |
-4  | 1211104786 | Nicholas Tan Zhi Xuan |                   |   
+No | ID         | Name                  | Task descriptions                                            | Contribution %
+-- | ---------- | ----------------------| ------------------------------------------------------------ | --------------
+1  | 1191103257 | Choong Seow Rou       | card deck, random cards, instructions menu                   | 21.5
+2  | 1211103412 | Lai Chi Nyet          | player class function, deal cards to player and center       | 21.5
+3  | 1191103213 | Ang Kuan Yang         | rank class, suit class, give card to center                  | 21.5
+4  | 1211104786 | Nicholas Tan Zhi Xuan | lead card, player lead turn, follow suit or rank, draw cards | 35
 
 
 ## B. Feature Completion
@@ -30,4 +30,4 @@ No | Feature                                                                    
 
 Upload your video presentation to your Google drive or YouTube, then paste the link below. Give your lab lecturer the permission to view the video.
 
-https://link_to_your_video_presentation
+https://youtu.be/Gt1u1eg1b6Q
