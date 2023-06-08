@@ -1,8 +1,11 @@
-import java.util.Scanner;
+import java.util.*;
+import frame.WelcomePage;
 
 public class Game {
+
     // scanner
     private static final Scanner scanner = new Scanner(System.in);
+
     // create array for menu choices
     static String[] menuChoices = {
         "s - Start a new game", 
@@ -22,8 +25,12 @@ public class Game {
         System.out.println("Press any key to continue...");
         scanner.nextLine();
     }
+    public static void call_welcomePage(){
+        new WelcomePage();
+    }
     // create start game function
     public static void startGame(){
+        call_welcomePage();
         // Display game intro
         System.out.println(">>>>>>>>>>> GO BOOM <<<<<<<<<<<<");
         System.out.println("+                              +");
@@ -57,7 +64,7 @@ public class Game {
                     System.out.print(p[i].playerName + ", ");
                 }
                 System.out.print(" enjoy the game!!!");
-//                System.out.println("Hi, " + player1Name + ", " + player2Name + ", " + player3Name + ", " + player4Name + " enjoy the game!!!");
+                //System.out.println("Hi, " + player1Name + ", " + player2Name + ", " + player3Name + ", " + player4Name + " enjoy the game!!!");
                 pressAnyKeyToContinue();
                 // create deck
                 Deck deck = new Deck(p[0].playerName);
@@ -190,12 +197,10 @@ public class Game {
                                 i--;
                                 continue;
                             }
-
                             if (p[i].cards.isEmpty()){
                                 gameOver = true;
                                 break;
                             }
-
                             turn++;
                             turn %= 4;
                         }
@@ -208,6 +213,10 @@ public class Game {
                 // Quit the game
                 System.out.println("Thanks for playing!");
                 break;
+            }else if(input.equals("r")){
+                
+                System.out.println("game restarted");
+                startGame();
             }
             // if player input = else
             else{
