@@ -52,9 +52,13 @@ public class Deck extends Player{
             this.give(cards.get(0), hand);
         }
     }
-  
     // flip card
     public void flip(Card c){
         c.flip();
     }
+
+    public boolean exhausted(){
+        return cards.size() == 0;
+    }
 }
+
