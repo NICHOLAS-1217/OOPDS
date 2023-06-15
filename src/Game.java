@@ -54,17 +54,21 @@ public class Game {
         }
     }
 
-    public static void writeFiles(Player[] p, Deck deck) {
+    public static void writeFiles(Player[] p, Deck deck, Player[] centerStr ,Player[] centerHand) {
         try {
             FileWriter writer = new FileWriter("saved/anotherGame.txt");
             for (int i = 0; i < 4; i++) {
                 writer.write(p[i].playerName+"\n");
                 writer.write(p[i].showCard());
-
+            }
+            for (int j = 0; j < centerHand.length; j++) {
+                writer.write(centerStr[j].showName()+ "\n");
+                writer.write(centerHand[j].showCard());
             }
 //            for (int i = 0; i < 4; i++) {
 //                writer.write(p[i].showCard()+"\n");
 //            }
+            writer.write("deck"+"\n");
             writer.write(deck.showCard());
             writer.close();
 
@@ -229,7 +233,7 @@ public class Game {
                                         continue;
                                     }
                                     if(firstCardToGiveString.equals("q")){
-                                        writeFiles(p, deck);
+                                        writeFiles(p, deck, centerStr ,centerHand);
                                         writer.close();
                                         startGame();
                                     }
@@ -250,7 +254,7 @@ public class Game {
                                     }
 
                                     if(cardToGiveString.equals("q")){
-                                        writeFiles(p, deck);
+                                        writeFiles(p, deck, centerStr ,centerHand);
                                         writer.close();
                                         startGame();
                                     }
@@ -291,7 +295,7 @@ public class Game {
             } else if(input.equals("x")){
                 // Quit the game
                 System.out.println("Thanks for playing!");
-                quit = true;
+                break;
             } else if(input.equals("r")){
                 System.out.println("game restarted");
                 deleteGameFiles();
