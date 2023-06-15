@@ -303,14 +303,3 @@ public class Game {
         }
     }
 }
-                System.out.println("game restarted");
-                startGame();
-            }
-            // if player input = else
-            else{
-                // No such option
-                System.out.println("no such command!");
-            }
-        }
-    }
-}
