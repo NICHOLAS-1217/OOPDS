@@ -2,12 +2,12 @@
 
 ## A. Member Contributions
 
-No | ID         | Name | Task descriptions | Contribution %
--- | ---------- | ---- | ----------------- | --------------
-1  | 1221234567 |      |                   |
-2  |            |      |                   |
-3  |            |      |                   |
-4  |            |      |                   |
+No | ID         | Name                  | Task descriptions                                            | Contribution %
+-- | ---------- | ----------------------| ------------------------------------------------------------ | --------------
+1  | 1191103257 | Choong Seow Rou       |                                                              | 
+2  | 1211103412 | Lai Chi Nyet          |                                                              | 
+3  | 1191103213 | Ang Kuan Yang         |                                                              | 
+4  | 1211104786 | Nicholas Tan Zhi Xuan |                                                              | 100%
 
 
 ## B. Part 1 Feature Completion (Latest)
@@ -37,13 +37,13 @@ No | Feature                                                                    
 2  | When the remaining deck is exhausted and the player cannot play,                 | Y
    | the player does not play in the trick.                                           |
 3  | Finish a round of game correctly. Display the score of each player.              | Y
-4  | Can exit and save the game (use file or database).                               |
-5  | Can resume the game. The state of the game is restored when resuming a game      |
+4  | Can exit and save the game (use file or database).                               | Y
+5  | Can resume the game. The state of the game is restored when resuming a game      | P
    | (use file or database).                                                          |
 6  | Reset the game. All scores become zero. Round and trick number restart from 1.   | Y
-7  | Support GUI playing mode (cards should be faced up or down as in the real game). |
+7  | Support GUI playing mode (cards should be faced up or down as in the real game). | P
    | The GUI can be in JavaFX, Swing, Spring, or Android.                             |
-8  | Keep the console output to facilitate checking.                                  |
+8  | Keep the console output to facilitate checking.                                  | P
    | The data in console output and the GUI must tally.                               |
 
 
