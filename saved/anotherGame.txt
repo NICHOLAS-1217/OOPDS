@@ -1,0 +1,22 @@
+1
+2
+3
+4
+Ac,Ad,8d,4c,5s,3s,Qc
+9h,9d,10c,9c,4d,2s
+5d,Js,10s,Kc,4s,Jd
+10h,Qs,10d,Qd,6d,Qh,2c
+0
+8
+7
+0
+52
+43
+49
+58
+2h,8h,7h
+7d,4h,As,Jc,7s,Jh,6c,Ks,8s,8c,6h,3c,Ah,2d,Kd,3d,Kh,7c,9s,6s,5h,3h,5c
+3
+3
+2
+end of line
