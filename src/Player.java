@@ -14,6 +14,10 @@ public class Player {
         this.playerName = playerName;
         cards = new ArrayList<Card>();
     }
+
+    public void loadCards(String data) {
+
+    }
     public String showName(){
         return playerName;
     }
@@ -38,9 +42,9 @@ public class Player {
             }
         }
         // if the card face up then show total points
-        if(faceUp){
-            cardString += "] total points = " + getTotal() + "\n";
-        }
+//        if(faceUp){
+//            cardString += "] total points = " + getTotal() + "\n";
+//        }
         return cardString;
     }
     public int getCardCount(){
@@ -78,12 +82,6 @@ public class Player {
         }
         return false; // Card not found in the player's hand
     }
-//
-//    public boolean giveCardToCenter(String firstCardString, String cardString, Player center) {
-//        for(Card card : cards) {
-//
-//        }
-//    }
     // get total points function
     public int getTotal(){
         int totalPts = 0;
@@ -134,7 +132,23 @@ public class Player {
         }
         return rankStr;
     }
-}
 
+    public void dealLoad(String hand){
+
+        String[] hands = hand.split(",");
+
+        // Iterate through each card element
+        for (String oneCard : hands) {
+            // Extract the suit and rank of each card
+            String suitString = oneCard.substring(oneCard.length() - 1);
+            String rankString = oneCard.substring(0, oneCard.length() - 1);
+
+            Rank rank = Rank.fromString(rankString);
+            Suit suit = Suit.fromString(suitString);
+
+            Card card = new Card(rank, suit);
+
+            cards.add(card);
+        }
     }
 }
