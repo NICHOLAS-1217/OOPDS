@@ -219,8 +219,6 @@ public class Game {
             // not game over
             // gameplay(trick, turn);
             gameplay(firstLeadCard, order);
-        // game over
-        System.out.println("blablabla wins the game");
     }
 
     public static void gameplay(String firstLeadCard, int order) {
@@ -339,8 +337,26 @@ public class Game {
                     continue;
                 }
                 if (p[order].cards.isEmpty()) {
-                    gameOver = true;
-                    break;
+                        Player lowestPointPlayer = p[0]; // Initialize with the first player
+                            for (Player player : p) {
+                                if (player.getTotal() < lowestPointPlayer.getTotal()) {
+                                    lowestPointPlayer = player;
+                                }
+                            }
+
+                            System.out.println(lowestPointPlayer.playerName + " wins the game");
+                            System.out.println(">>>>>LEADERBOARD<<<<<<");
+
+                            // Sort players by total points from lowest to highest
+                            Arrays.sort(p, Comparator.comparingInt(Player::getTotal));
+
+                            for (Player player : p) {
+                                System.out.println(player.playerName + ": " + player.getTotal() + " points");
+                            }
+                        
+                    
+                            gameOver = true;
+                            break;
                 }
 
                 turn++;
