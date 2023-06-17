@@ -1,3 +1,4 @@
+
 public enum Rank {
     // create rank for cards
     ACE(11,"A"),
@@ -29,5 +30,14 @@ public enum Rank {
     // get rank string
     public String getRankString(){
         return rankString;
+    }
+
+    public static Rank fromString(String input) {
+        for (Rank rank : Rank.values()) {
+            if (rank.getRankString().equalsIgnoreCase(input)) {
+                return rank;
+            }
+        }
+        return null; // Return null if no matching enum value is found
     }
 }
