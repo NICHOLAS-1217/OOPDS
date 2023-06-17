@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 public class Game {
 
     private static final Scanner scanner = new Scanner(System.in);
-     public static Player[] p = new Player[4];
-     public static Player center;
+    public static Player[] p = new Player[4];
+    public static Player center;
     public static Player[] centerStr;
     public static Player[] centerHand;
     public static Deck deck;
@@ -37,8 +37,6 @@ public class Game {
     }
 
     // welcome page -------------------------------
-
-    private static boolean s;
     public static void call_welcomePage(){
         new WelcomePage();
     }
