@@ -14,4 +14,14 @@ public enum Suit {
     public String getSuitString(){
         return suitString;
     }
+
+    public static Suit fromString(String input) {
+        for (Suit suit : Suit.values()) {
+            if (suit.getSuitString().equalsIgnoreCase(input)) {
+                return suit;
+            }
+        }
+        return null; // Return null if no matching enum value is found
+    }
 }
+
