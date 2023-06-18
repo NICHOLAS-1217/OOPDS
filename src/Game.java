@@ -149,8 +149,9 @@ public class Game {
             }
 
             line = Files.readAllLines(path).get(lineNum);
-            centerHand = new Player[]{new Player("center")};
-            centerStr = new Player[]{new Player("center")};
+            center = new Player("center");
+            centerHand = new Player[]{center};
+            centerStr = new Player[]{center};
             centerHand[0].dealLoad(line);
 
             lineNum++;
