@@ -16,6 +16,8 @@ public class Game {
     public static boolean gameOver = false;
     public static int trick;
     public static int turn;
+    public static String firstCardToGiveString = "";
+
 
     private static final String fileName = "saved/anotherGame.txt";
 
@@ -26,7 +28,8 @@ public class Game {
         "l - Load game",
         "x - Exit the game", 
         "d - Draw cards from deck until a playable card is obtained. If the deck is empty, skip to the next player. ",
-        "card - a card played by the current player"
+        "card - a card played by the current player",
+        "q - quit the game to the menu"
     };
     static Instructions menu = new Instructions(menuChoices);
 
@@ -94,6 +97,7 @@ public class Game {
 
             writer.write(Integer.toString(trick)+"\n");
             writer.write(Integer.toString(turn)+"\n");
+            writer.write(firstCardToGiveString+"\n");
             writer.write(Integer.toString(order)+"\n");
 
             writer.write("end of line");
@@ -164,6 +168,11 @@ public class Game {
 
             lineNum++;
             line = Files.readAllLines(path).get(lineNum);
+            firstCardToGiveString = line;
+
+            lineNum++;
+            line = Files.readAllLines(path).get(lineNum);
+            System.out.println(line);
 
             return Integer.parseInt(line);
 
@@ -225,14 +234,19 @@ public class Game {
 
         while (!gameOver) {
             int highestTrickPoint = 0;
+            int highestPrio = 0;
             int leadPlayer = -1;
-            String firstCardToGiveString = "";
 
             for (int j = 0; j < p.length; j++) {
                 Player player = p[j];
                 if (player.trickPoints > highestTrickPoint) {
                     highestTrickPoint = player.trickPoints;
+                    highestPrio = player.getRankPriority();
                     leadPlayer = j;
+                } else if (player.trickPoints == highestTrickPoint) {
+                    if (player.getRankPriority() < highestPrio) {
+                        leadPlayer = j;
+                    } 
                 }
             }
 
@@ -377,7 +391,7 @@ public class Game {
     public static void startGame(){
 
         boolean quit = false;
-//        call_welcomePage();
+        //call_welcomePage();
 
         // menu ----------------------------------------------------------------
         System.out.println(">>>>>>>>>>> GO BOOM <<<<<<<<<<<<");
