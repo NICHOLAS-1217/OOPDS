@@ -18,6 +18,9 @@ public class Card {
     public String getRankString(){
         return rank.getRankString();
     }
+    public int getRankPriority(){
+        return rank.getRankPriority();
+    }
     // calling functions form suit class
     public String getSuitString(){
         return suit.getSuitString();
