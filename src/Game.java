@@ -29,7 +29,8 @@ public class Game {
         "x - Exit the game", 
         "d - Draw cards from deck until a playable card is obtained. If the deck is empty, skip to the next player. ",
         "card - a card played by the current player",
-        "q - quit the game to the menu"
+        "q - quit the game to the menu",
+        "r - restart the game"
     };
     static Instructions menu = new Instructions(menuChoices);
 
