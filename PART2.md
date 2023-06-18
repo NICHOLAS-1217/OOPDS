@@ -4,10 +4,10 @@
 
 No | ID         | Name                  | Task descriptions                                            | Contribution %
 -- | ---------- | ----------------------| ------------------------------------------------------------ | --------------
-1  | 1191103257 | Choong Seow Rou       |                                                              | 
-2  | 1211103412 | Lai Chi Nyet          |                                                              | 
-3  | 1191103213 | Ang Kuan Yang         |                                                              | 
-4  | 1211104786 | Nicholas Tan Zhi Xuan |                                                              | 100%
+1  | 1191103257 | Choong Seow Rou       | gui, play a turn correctly                                   | 25%
+2  | 1211103412 | Lai Chi Nyet          | exit game, save game                                         | 25%
+3  | 1191103213 | Ang Kuan Yang         | display leader score board                                   | 25%
+4  | 1211104786 | Nicholas Tan Zhi Xuan | load game, reset game                                        | 25%
 
 
 ## B. Part 1 Feature Completion (Latest)
