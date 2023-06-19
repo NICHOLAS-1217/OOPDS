@@ -51,5 +51,10 @@ No | Feature                                                                    
 
 https://github.com/NICHOLAS-1217/OOPDS
 
+
+## E. Link to Video Presentation
+
+Upload your video presentation to your Google drive or YouTube, then paste the link below. Give your lab lecturer the permission to view the video.
+
 https://youtu.be/XW7udG8hHug
 
